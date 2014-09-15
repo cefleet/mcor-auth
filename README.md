@@ -1,4 +1,4 @@
 node-authentication
 ===================
 
-Authentication For Node
+Authentication For Mode.js to be used with MCOR items.
