@@ -5,37 +5,7 @@ var redis = require("redis");
 var client = redis.createClient();
 
 //TODO for now we are going to use REDIS
-/*
-client.hmset('clint.fleetwood@gmail.com', {
-	username:"cefleet",
-	email:"clint.fleetwood@gmail.com",
-	types:'{"google":{"identifier":"AItOawl6Ly-Ux5CDpNgeDkT0j35P76XJOYRVkmY", "active":"true"}, "local":{"active":"true"}}',
-	apps:'{"woi":{"type":"admin"}}'
-});
-*/
-/*
-client.hmset('clint.fleetwood@gmail.com:info', {
-	types:'{"google":{"identifier":"AItOawl6Ly-Ux5CDpNgeDkT0j35P76XJOYRVkmY", "active":"true"}}',
-	apps:'{"woi":{"type":"admin"}}'
-});
 
-client.hget("clint.fleetwood@gmail.com", "type", function(err,types){
-	types = types.split(',');
-	if(types.indexOf('google') > -1){
-		console.log('We have google action over here');
-		client.hget("clint.fleetwood@gmail.com:info","types", function(err,types){
-			console.log(JSON.parse(types).google.identifier);
-		});
-	}
-});
-*/
-/*
-var Users = {
-	cefleet:{username:'cefleet',password:'password', id:'1'},
-	user:{username:'user', password:'password2', id:'2'},
-	clint2: {username:'cefleet2',password:'3rg34f4D3423f',id:'3', type:['google'],identifier:'AItOawl6Ly-Ux5CDpNgeDkT0j35P76XJOYRVkmY'}
-}
-*/
 
 var Auth = function Auth(app,express){
 	this.authenticate = function(req,res,next){
